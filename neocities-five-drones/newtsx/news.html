@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html lang=fr>
+        <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">        
+    <title>Fivedrones - Nouvelles</title>
+    <meta name="description" content="Les dernières nouvelles de photos et vidéos fivedrones">
+    <link rel="icon" href="mtgn.png">
+    <link href=styles.css rel=stylesheet>
+        </head>
+        <body>
+            <div class="flex flex-col min-h-screen bg-[#eeeeee] text-green-800">
+                <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 bg-[#eeeeee] text-green-800 banner-background">
+                    <div class="flex items-center space-x-2">
+                        <img src="mtgn.png" width="38" height="23" class=" " alt="Icon">
+                        <span class="text-lg font-bold">Fivedrones.</span>
+                    </div>
+                    <nav class="hidden md:flex space-x-4">
+                        <a class="hover:text-green-800" href="index.html">Accueil</a>
+                        <a class="hover:text-green-800" href="collections.html">Collections</a>
+                        <a class="hover:text-green-800" href="news.html">Actus</a>
+                        <a class="hover:text-green-800" href="contact.html">Contact</a>
+                    </nav>
+                    <div class="hamburger md:hidden" id="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </header>
+                <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-[#eeeeee] z-50">
+                    <a class="hover:text-green-800 block text-center p-2" href="index.html">Accueil</a>
+                    <a class="hover:text-green-800 block text-center p-2" href="collections.html">Collections</a>
+                    <a class="hover:text-green-800 block text-center p-2" href="news.html">Actus</a>
+                    <a class="hover:text-green-800 block text-center p-2" href="contact.html">Contact</a>
+                </div>
+    <main class="flex-1 pt-24">
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container px-4 md:px-6">
+                <div class="flex flex-col items-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-green-800">
+                            Dernières Nouvelles
+                        </h1>
+                        <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                            Restez informés sur les dernières mises à jour et nouvelles collection/vidéos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container px-4 md:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="frosted-glass mx-auto flex w-full items-center justify-center flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h2 class="text-xl font-bold text-green-800">La Gorge de La Nive </h2>
+                        </div>
+                        <div class="p-6"><img src="https://i.postimg.cc/rF6hFfny/DJI-0075.jpg" alt="News Image 1" class="rounded-lg" width="300" height="200" style="aspect-ratio: 300 / 200; object-fit: cover;">
+                            <p class="mt-4 text-gray-500">Partez pour Itxassou</p>
+                            <br><div class="flex flex-col gap-2 min-[400px]:flex-row"><a class="justify-center bg-green-800 dark:bg-green-800 dark:focus-visible:ring-green-700 dark:hover:bg-green-700 dark:text-white disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-700 font-medium h-10 hover:bg-green-700 inline-flex items-center px-8 rounded-md shadow text-sm text-white transition-colors" style="border-radius: 10px" href=gorge.html>Découvrir</a></div>
+                        </div>
+                    </div>
+                    <div class="frosted-glass mx-auto flex w-full items-center justify-center flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h2 class="text-xl font-bold text-green-800">Nouvelle collection Espagne. </h2>
+                        </div>
+                        <div class="p-6"><img src="https://i.postimg.cc/zBv34zQf/esp-17.jpg" alt="News Image 1" class="rounded-lg" width="300" height="200" style="aspect-ratio: 300 / 200; object-fit: cover;">
+                            <p class="mt-4 text-gray-500">Découvrez-là dès maintenant.</p>
+                            <br><div class="flex flex-col gap-2 min-[400px]:flex-row"><a class="justify-center bg-green-800 dark:bg-green-800 dark:focus-visible:ring-green-700 dark:hover:bg-green-700 dark:text-white disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-700 font-medium h-10 hover:bg-green-700 inline-flex items-center px-8 rounded-md shadow text-sm text-white transition-colors" style="border-radius: 10px" href=esp.html>Découvrir</a></div>
+                        </div>
+                    </div>
+                    <!--<div class="frosted-glass mx-auto flex w-full items-center justify-center flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h2 class="text-xl font-bold text-green-800">Nouvelle collection Espagne. </h2>
+                        </div>
+                        <div class="p-6"><img src="https://i.postimg.cc/zBv34zQf/esp-17.jpg" alt="News Image 1" class="rounded-lg" width="300" height="200" style="aspect-ratio: 300 / 200; object-fit: cover;">
+                            <p class="mt-4 text-gray-500">Découvrez-là dès maintenant.</p>
+                            <br><div class="flex flex-col gap-2 min-[400px]:flex-row"><a class="justify-center bg-green-800 dark:bg-green-800 dark:focus-visible:ring-green-700 dark:hover:bg-green-700 dark:text-white disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-700 font-medium h-10 hover:bg-green-700 inline-flex items-center px-8 rounded-md shadow text-sm text-white transition-colors" style="border-radius: 10px" href=esp.html>Découvrir</a></div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#eeeeee] text-green-800">
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+            © 2024 FiveDrones. Tous droits réservés.
+        </p>
+        <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+            <a class="text-xs hover:text-green-800 underline-offset-4" href="about.html">A propos</a>
+            <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.youtube.com/channel/UC828rnXUQ8X7d0bdKPDGCWA">YouTube</a>
+            <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.instagram.com/fivedrones_/">Instagram</a>
+        </nav>
+    </footer>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('visible');
+                hamburger.classList.toggle('is-active');
+            });
+        } else {
+            console.error('Hamburger or mobile menu element not found');
+        }
+    });
+</script>
+</body>
+</html>

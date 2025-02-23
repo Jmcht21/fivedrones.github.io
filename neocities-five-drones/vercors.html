@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Fivedrones - Vercors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Le massif du Vercors : la carrière écroulée et les gorge du Saint-Gervais vus du ciel - fivedrones">
+    <link rel="icon" href="mtgn.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="Vercors-page">
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader"></div>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+        <div id="progress-text" class="progress-text">Chargement 0%</div>
+    </div>
+    <div class="flex flex-col min-h-screen bg-[#eeeeee] text-green-800">
+        <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 bg-[#eeeeee] text-green-800 banner-background">
+            <div class="flex items-center space-x-2">
+                <img src="mtgn.png" width="38" height="23" alt="Icon">
+                <span class="text-lg font-bold">Fivedrones.</span>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="hover:text-green-800" href="index.html">Accueil</a>
+                <a class="hover:text-green-800" href="collections.html">Collections</a>
+                <a class="hover:text-green-800" href="news.html">Actus</a>
+                <a class="hover:text-green-800" href="contact.html">Contact</a>
+            </nav>
+            <div class="hamburger md:hidden" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-[#eeeeee] z-50">
+            <a class="hover:text-green-800 block text-center p-2" href="index.html">Accueil</a>
+            <a class="hover:text-green-800 block text-center p-2" href="collections.html">Collections</a>
+            <a class="hover:text-green-800 block text-center p-2" href="news.html">Actus</a>
+            <a class="hover:text-green-800 block text-center p-2" href="contact.html">Contact</a>
+        </div>
+        <main class="flex-1 pt-24">
+            <section class="w-full py-12 md:py-24 lg:py-32 bg-image">
+                <div class="container px-4 md:px-6">
+                    <div class="flex flex-col items-center space-y-4 text-center">
+                        <div class="space-y-2 gradient-background">
+                            <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-green-800">
+                                Vercors
+                            </h1>
+                            <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                                Le massif du Vercors : la carrière écroulée et les gorge du Saint-Gervais vus du ciel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full py-12 md:py-24 lg:py-32">
+                <div class="container px-4 md:px-6">
+                    <div class="gallery-grid">
+                        
+                <a href="https://i.postimg.cc/MTyCSGK0/DJI-0340.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/MTyCSGK0/DJI-0340.jpg" alt="Gallery Image 1" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/Vvg2JHtd/DJI-0342.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/Vvg2JHtd/DJI-0342.jpg" alt="Gallery Image 2" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/4ysrNTmD/DJI-0345.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/4ysrNTmD/DJI-0345.jpg" alt="Gallery Image 3" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/sXRLwR9M/DJI-0349.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/sXRLwR9M/DJI-0349.jpg" alt="Gallery Image 4" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/sxjNC9Ly/DJI-0352.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/sxjNC9Ly/DJI-0352.jpg" alt="Gallery Image 5" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/85B0Yntt/DJI-0355.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/85B0Yntt/DJI-0355.jpg" alt="Gallery Image 6" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/2y0XkLpW/DJI-0371.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/2y0XkLpW/DJI-0371.jpg" alt="Gallery Image 7" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/4xD2xT0W/DJI-0380.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/4xD2xT0W/DJI-0380.jpg" alt="Gallery Image 8" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/mr7Xc5fB/DJI-0383.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/mr7Xc5fB/DJI-0383.jpg" alt="Gallery Image 9" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/2yS2KjqS/DJI-0388.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/2yS2KjqS/DJI-0388.jpg" alt="Gallery Image 10" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/W3n58q1y/DJI-0395.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/W3n58q1y/DJI-0395.jpg" alt="Gallery Image 11" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/KYQTsPtt/DJI-0408.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/KYQTsPtt/DJI-0408.jpg" alt="Gallery Image 12" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/766zv5Nd/DJI-0413.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/766zv5Nd/DJI-0413.jpg" alt="Gallery Image 13" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/zvHRB46k/DJI-0415.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/zvHRB46k/DJI-0415.jpg" alt="Gallery Image 14" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/QVLKW0rZ/DJI-0416.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/QVLKW0rZ/DJI-0416.jpg" alt="Gallery Image 15" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/dQg5BFsw/DJI-0418.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/dQg5BFsw/DJI-0418.jpg" alt="Gallery Image 16" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/h4XCTvq2/DJI-0422.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/h4XCTvq2/DJI-0422.jpg" alt="Gallery Image 17" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/0ysZTCK4/DJI-0425.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/0ysZTCK4/DJI-0425.jpg" alt="Gallery Image 18" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/65RYbPqR/DJI-0432.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/65RYbPqR/DJI-0432.jpg" alt="Gallery Image 19" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/mrZjD2wN/DJI-0434.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/mrZjD2wN/DJI-0434.jpg" alt="Gallery Image 20" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/k5jct3Yr/DJI-0435.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/k5jct3Yr/DJI-0435.jpg" alt="Gallery Image 21" class="rounded-lg" width="300" height="300">
+                </a>
+
+                <a href="https://i.postimg.cc/bY97Vd5p/DJI-0437.jpg" data-lightbox="gallery">
+                    <img src="https://i.postimg.cc/bY97Vd5p/DJI-0437.jpg" alt="Gallery Image 22" class="rounded-lg" width="300" height="300">
+                </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#eeeeee] text-green-800">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+                © 2024 FiveDrones. Tous droits réservés.
+            </p>
+            <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="about.html">A propos</a>
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.youtube.com/channel/UC828rnXUQ8X7d0bdKPDGCWA">YouTube</a>
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="vercorshd.html">Version UHD</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

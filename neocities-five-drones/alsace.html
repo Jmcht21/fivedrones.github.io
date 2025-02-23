@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <title>Fivedrones - Alsace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="L'Alsace vue en drone - fivedrones">
+    <link rel="icon" href="mtgn.png">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="loading-screen" class="loading-screen">
+  <div class="loader"></div>
+  <div class="progress-bar">
+    <div id="progress-bar-fill" class="progress-bar-fill"></div>
+  </div>
+  <div id="progress-text" class="progress-text">Chargement 0%</div>
+</div>
+  <div class="flex flex-col min-h-screen bg-[#eeeeee] text-green-800">
+      <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 bg-[#eeeeee] text-green-800 banner-background">
+          <div class="flex items-center space-x-2">
+              <img src="mtgn.png" width="38" height="23" class=" " alt="Icon">
+              <span class="text-lg font-bold">Fivedrones.</span>
+          </div>
+          <nav class="hidden md:flex space-x-4">
+              <a class="hover:text-green-800" href="index.html">Accueil</a>
+              <a class="hover:text-green-800" href="collections.html">Collections</a>
+              <a class="hover:text-green-800" href="news.html">Actus</a>
+              <a class="hover:text-green-800" href="contact.html">Contact</a>
+          </nav>
+          <div class="hamburger md:hidden" id="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </header>
+      <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-[#eeeeee] z-50">
+          <a class="hover:text-green-800 block text-center p-2" href="index.html">Accueil</a>
+          <a class="hover:text-green-800 block text-center p-2" href="collections.html">Collections</a>
+          <a class="hover:text-green-800 block text-center p-2" href="news.html">Actus</a>
+          <a class="hover:text-green-800 block text-center p-2" href="contact.html">Contact</a>
+      </div>
+        <main class="flex-1 pt-24">
+            <section class="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://i.postimg.cc/nrZCpWqk/Galerie-19.jpg'); filter: blur(5px); transform: scale(1.1);"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white opacity-70"></div>
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="flex flex-col items-center space-y-4 text-center">
+            <div class="space-y-2 bg-white bg-opacity-50 p-6 rounded-lg">
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-green-800">
+                   Alsace
+                </h1>
+                <p class="mx-auto max-w-[700px] text-gray-700 md:text-xl">
+                    De Riquewire à la route des crètes en Alsace.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="w-full py-12 md:py-24 lg:py-32">
+    <div class="container px-4 md:px-6">
+        <div class="gallery-grid">
+            <a href="https://i.postimg.cc/jSCCxPnG/Galerie-1.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/jSCCxPnG/Galerie-1.jpg" alt="Gallery Image 1" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/nz9vCNjf/Galerie-10.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/nz9vCNjf/Galerie-10.jpg" alt="Gallery Image 2" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/DzMrf7zc/Galerie-11.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/DzMrf7zc/Galerie-11.jpg" alt="Gallery Image 3" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/PfZWhsnm/Galerie-12.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/PfZWhsnm/Galerie-12.jpg" alt="Gallery Image 4" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/qqdCgqH2/Galerie-13.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/qqdCgqH2/Galerie-13.jpg" alt="Gallery Image 5" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/0QSw8mF8/Galerie-14.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/0QSw8mF8/Galerie-14.jpg" alt="Gallery Image 6" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/zDng6CT7/Galerie-15.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/zDng6CT7/Galerie-15.jpg" alt="Gallery Image 7" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/dtwyYhBY/Galerie-16.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/dtwyYhBY/Galerie-16.jpg" alt="Gallery Image 8" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/MGMcDVWy/Galerie-17.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/MGMcDVWy/Galerie-17.jpg" alt="Gallery Image 9" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/YS5vy09T/Galerie-18.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/YS5vy09T/Galerie-18.jpg" alt="Gallery Image 10" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/nrZCpWqk/Galerie-19.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/nrZCpWqk/Galerie-19.jpg" alt="Gallery Image 11" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/pL7rprDy/Galerie-2.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/pL7rprDy/Galerie-2.jpg" alt="Gallery Image 12" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/jdMLYZ2H/Galerie-20.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/jdMLYZ2H/Galerie-20.jpg" alt="Gallery Image 13" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/zfgBWNj7/Galerie-3.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/zfgBWNj7/Galerie-3.jpg" alt="Gallery Image 14" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/j5Yj413b/Galerie-4.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/j5Yj413b/Galerie-4.jpg" alt="Gallery Image 15" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/mDPS7tnq/Galerie-5.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/mDPS7tnq/Galerie-5.jpg" alt="Gallery Image 16" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/4Nk1h4QL/Galerie-6.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/4Nk1h4QL/Galerie-6.jpg" alt="Gallery Image 17" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/L5fB0G23/Galerie-7.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/L5fB0G23/Galerie-7.jpg" alt="Gallery Image 18" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/pVnZT5z5/Galerie-8.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/pVnZT5z5/Galerie-8.jpg" alt="Gallery Image 19" class="rounded-lg" width="300" height="300">
+            </a>
+            <a href="https://i.postimg.cc/8C5dV7T5/Galerie-9.jpg" data-lightbox="gallery">
+                <img src="https://i.postimg.cc/8C5dV7T5/Galerie-9.jpg" alt="Gallery Image 20" class="rounded-lg" width="300" height="300">
+            </a>
+        </div>
+    </div>
+</section>
+        </main>
+        <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#eeeeee] text-green-800">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+                © 2024 FiveDrones. Tous droits réservés.
+            </p>
+            <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="about.html">A propos</a>
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.youtube.com/channel/UC828rnXUQ8X7d0bdKPDGCWA">YouTube</a>
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.instagram.com/fivedrones_/">Instagram</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

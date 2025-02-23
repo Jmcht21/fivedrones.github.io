@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Fivedrones - Accueil</title>
+    <meta name="description" content="Découvrez le monde vu du ciel avec FiveDrones par les collections de photos postées récemment">
+    <link rel="icon" href="mtgn.png">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex flex-col min-h-screen bg-[#eeeeee] text-green-800">
+        <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 bg-[#eeeeee] text-green-800 banner-background">
+            <div class="flex items-center space-x-2">
+                <img src="mtgn.png" width="38" height="23" class=" " alt="Icon">
+                <span class="text-lg font-bold">Fivedrones.</span>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="hover:text-green-800" href="index.html">Accueil</a>
+                <a class="hover:text-green-800" href="collections.html">Collections</a>
+                <a class="hover:text-green-800" href="news.html">Actus</a>
+                <a class="hover:text-green-800" href="contact.html">Contact</a>
+            </nav>
+            <div class="hamburger md:hidden" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-[#eeeeee] z-50">
+            <a class="hover:text-green-800 block text-center p-2" href="index.html">Accueil</a>
+            <a class="hover:text-green-800 block text-center p-2" href="collections.html">Collections</a>
+            <a class="hover:text-green-800 block text-center p-2" href="news.html">Actus</a>
+            <a class="hover:text-green-800 block text-center p-2" href="contact.html">Contact</a>
+        </div>
+        <main class="flex-1 pt-24">
+            <section class="bg lg:py-40 bg-[#eeeeee] md:py-24 py-12 w-full xl:py-48">
+                <div class="md:px-6 px-4 container">
+                    <div class="flex flex-col space-y-4 items-center text-center">
+                        <div class=space-y-2>
+                            <p class="hero-title ">FiveDrones.</p>
+                            <p class="dark:text-gray-400 text-gray-500 max-w-[700px] md:text-xl mx-auto" style=color:#e0e0e0>Explorez le monde avec les vues aériennes
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="lg:py-32 bg-[#eeeeee] md:py-24 py-12 w-full">
+                <div class="md:px-6 px-4 container">
+                    <div class="gap-6 grid items-center lg:gap-12 lg:grid-cols-[1fr_500px] xl:grid-cols-[1fr_550px]">
+                        <div class="flex flex-col space-y-4 justify-center">
+                            <div class="space-y-2">
+                                <h2 class="text-green-800 font-bold sm:text-5xl text-3xl tracking-tighter">Dernières nouvelles</h2>
+                                <p class="dark:text-gray-400 text-gray-500 lg:text-base/relaxed max-w-[600px] md:text-xl/relaxed xl:text-xl/relaxed">Découvrez les nouvelles collections de photos et de vidéos</p>
+                            </div>
+                            <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                                <a class="justify-center bg-green-800 dark:bg-green-800 dark:focus-visible:ring-green-700 dark:hover:bg-green-700 dark:text-white disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-700 font-medium h-10 hover:bg-green-700 inline-flex items-center px-8 rounded-md shadow text-sm text-white transition-colors" style="border-radius: 10px" href="news.html">Découvrir</a>
+                            </div>
+                        </div>
+                        <div class="carousel">
+                            <img src="https://i.postimg.cc/3w3SHV76/esp-01.jpg" class="active" alt="Carousel Image 1">
+                            <img src="https://i.postimg.cc/rF6hFfny/DJI-0075.jpg" alt="Carousel Image 2">
+                            <img src="https://i.postimg.cc/bwp31sfK/DJI-0076.jpg" alt="Carousel Image 3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#eeeeee] text-green-800">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+                © 2024 FiveDrones. Tous droits réservés.
+            </p>
+            <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="about.html">A propos</a>
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.youtube.com/channel/UC828rnXUQ8X7d0bdKPDGCWA">YouTube</a>
+                <a class="text-xs hover:text-green-800 underline-offset-4" href="https://www.instagram.com/fivedrones_/">Instagram</a>
+            </nav>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

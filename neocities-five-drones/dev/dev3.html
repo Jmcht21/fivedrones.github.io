@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Galerie Fivedrones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .image-item {
+            position: relative;
+        }
+        .image-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(255, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #generatedCode {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        #dropArea {
+            border: 2px dashed #3498db;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #dropArea.hover {
+            border-color: #2980b9;
+        }
+        #uploadProgress {
+            margin-top: 10px;
+            display: none;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 20px;
+            background-color: #3498db;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Galerie Fivedrones</h1>
+        
+        <div class="input-group">
+            <input type="text" id="title" placeholder="Titre de la galerie">
+            <input type="text" id="subtitle" placeholder="Sous-titre de la galerie">
+        </div>
+        
+        <div class="input-group">
+            <label for="imageQuality">Qualité de l'image :</label>
+            <input type="range" id="imageQuality" min="1" max="100" value="70" oninput="updateQualityValue(this.value)">
+            <span id="qualityValue">70%</span>
+        </div>
+
+        <div class="input-group">
+            <input type="file" id="imageUpload" multiple accept="image/*" style="display: none;">
+            <div id="dropArea" onclick="document.getElementById('imageUpload').click()">
+                <p>Déposez vos images ici ou cliquez pour importer</p>
+            </div>
+        </div>
+        
+        <div id="uploadProgress" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <p id="uploadStatus"></p>
+        </div>
+        
+        <div class="input-group">
+            <textarea id="bulkImages" placeholder="Collez ici la liste des URLs d'images (une par ligne)" rows="5"></textarea>
+            <button onclick="addBulkImages()">Ajouter les images en masse</button>
+        </div>
+        
+        <div id="imageGrid" class="image-grid"></div>
+        
+        <button onclick="generateCode()">Générer le code HTML</button>
+        
+        <div class="code-output">
+            <h2>Code HTML généré :</h2>
+            <button onclick="copyCode()">Copier le code</button>
+            <textarea id="generatedCode" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js"></script>
+    <script>
+        let images = [];
+        let totalProgress = 0;
+
+        const dropArea = document.getElementById('dropArea');
+        const uploadProgress = document.getElementById('uploadProgress');
+        const progressBarFill = document.querySelector('.progress-bar-fill');
+        const uploadStatus = document.getElementById('uploadStatus');
+
+        dropArea.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            dropArea.classList.add('hover');
+        });
+
+        dropArea.addEventListener('dragenter', (e) => {
+            e.preventDefault();
+            dropArea.classList.add('hover');
+        });
+
+        dropArea.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropArea.classList.remove('hover');
+        });
+
+        dropArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+            dropArea.classList.remove('hover');
+            const files = event.dataTransfer.files;
+            uploadFiles(files);
+        });
+
+        document.getElementById('imageUpload').addEventListener('change', (event) => {
+            const files = event.target.files;
+            uploadFiles(files);
+        });
+
+        function updateQualityValue(value) {
+            document.getElementById('qualityValue').textContent = value + '%';
+        }
+
+        function uploadFiles(files) {
+            uploadProgress.style.display = 'block';
+            let uploadedCount = 0;
+            const totalFiles = files.length;
+            let totalProgress = 0;
+            const quality = document.getElementById('imageQuality').value / 100;
+
+            Array.from(files).forEach((file, index) => {
+                new Compressor(file, {
+                    quality: quality,
+                    success(result) {
+                        const formData = new FormData();
+                        formData.append('image', result, result.name);
+
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('POST', 'https://api.imgbb.com/1/upload?key=407943b21cdae7c1042e6d26919bcb21', true);
+
+                        xhr.upload.onprogress = function(e) {
+                            if (e.lengthComputable) {
+                                const percentComplete = (e.loaded / e.total) * 100;
+                                updateProgress(index, percentComplete, totalFiles);
+                            }
+                        };
+
+                        xhr.onload = function() {
+                            if (xhr.status === 200) {
+                                const response = JSON.parse(xhr.responseText);
+                                if (response.success) {
+                                    images.push(response.data.url);
+                                    uploadedCount++;
+                                    if (uploadedCount === totalFiles) {
+                                        updateImageGrid();
+                                        setTimeout(() => {
+                                            uploadProgress.style.display = 'none';
+                                        }, 2000);
+                                    }
+                                } else {
+                                    console.error('Erreur lors du téléchargement de l\'image');
+                                }
+                            } else {
+                                console.error('Erreur de requête. Statut:', xhr.status);
+                            }
+                        };
+
+                        xhr.send(formData);
+                    },
+                    error(err) {
+                        console.error(err.message);
+                    },
+                });
+            });
+        }
+
+        function updateProgress(fileIndex, progress, totalFiles) {
+            const progressPerFile = 100 / totalFiles;
+            const overallProgress = (fileIndex * progressPerFile) + (progress * progressPerFile / 100);
+            progressBarFill.style.width = `${overallProgress}%`;
+            uploadStatus.textContent = `Téléchargement en cours : ${Math.round(overallProgress)}%`;
+        }
+
+        // Autres fonctions inchangées : addBulkImages, removeImage, updateImageGrid, generateCode, copyCode
+
+    </script>
+</body>
+</html>
